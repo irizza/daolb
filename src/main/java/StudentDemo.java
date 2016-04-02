@@ -10,7 +10,7 @@ public class StudentDemo {
         Student student1 = new Student();
         student1.setFname("Petro");
         student1.setLname("Gorbenko");
-        student1.setGroup("KI-12-3");
+        student1.setGroup("KI-13-3");
         student1.setAge(19);
 
         Student student2 = new Student();
