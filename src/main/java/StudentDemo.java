@@ -41,6 +41,7 @@ public class StudentDemo {
             studentsByGroup = studentService.getStudentByGroup("KI-12-4");
             System.out.println("Student with group KI-12-4: " + studentsByGroup);
             studentDAO.DeleteStudent();
+
      /*   studentService.deleteStudent(student1,student1);*/
           /*studentService.deleteStudent(Student, );*/
       /*  studentService.deleteStudent(student1);*/
