@@ -13,6 +13,8 @@
         private static final String dbPassword = "root";
 
 
+
+
         private static String dbUrl = "jdbc:mysql://" + dbHost + "/" + dbName;
 
         public static Connection getConnection() throws SQLException {
