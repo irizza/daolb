@@ -16,7 +16,7 @@ public class StudentDAOMySQL {
             + " VALUES (?,?,?,?)";
     private static final String SQL_SELECT_BY_GROUPS = "SELECT * FROM students WHERE groups = ?";
     /**/
-    private static final String SQL_DELETE_BY_ID = "DELETE  FROM students WHERE tittle = ?";
+/*    private static final String SQL_DELETE_BY_ID = "DELETE  FROM students WHERE tittle = ?";*/
 
 
 
@@ -78,11 +78,17 @@ public class StudentDAOMySQL {
         prStatement.setString(k++, student.getGroup());
         prStatement.setInt(k++, student.getAge());
     }
-    /**/
+
+  /*  public static String getSqlDeleteById() {
+        return SQL_DELETE_BY_ID;
+    }
+
+    *//**//*
     public void delete(Connection connection, Student student) throws SQLException {
         PreparedStatement prStatement = connection.prepareStatement(SQL_DELETE_BY_ID);
         setDeleteStatementParameters(student,prStatement);
         prStatement.executeUpdate();
+
       //  prStatement.
       //  prStatement.close();
 
@@ -100,8 +106,23 @@ public class StudentDAOMySQL {
 
         prStatement.executeUpdate("DELETE * FROM filials.students");
 
-    }
+    }*/
+  private static final String DELETE_SUDENT = "DELETE FROM students WHERE id_students = ?";
+    public void  DeleteStudent(Connection connection , String id_students )
+    {
+        try {
+            PreparedStatement prStatement = connection.prepareStatement(DELETE_SUDENT);
+           /* setDeleteStatementParameters(student,prStatement);*/
+          /*  PreparedStatement.setString(1, id_students)*/
+           prStatement.setString(1, id_students);
+            prStatement.execute();
 
+
+           /* PreparedStatement.execute();*/
+        }catch(SQLException e){
+            System.out.println("error in delete detail " + e.toString());
+        }
+    }
 
 }
 

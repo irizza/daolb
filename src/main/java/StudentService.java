@@ -46,7 +46,7 @@ public class StudentService {
 
 
     /**/
-    public void deleteStudent(Student student) throws SQLException {
+ /*   public void deleteStudent(Student student) throws SQLException {
         Connection connection = ConnectionFactory.getConnection();
         try {
             studentDAO.delete(connection, student);
@@ -55,6 +55,6 @@ public class StudentService {
             connection.rollback();
             throw e;
         }
-    }
+    }*/
 
 }
