@@ -115,7 +115,7 @@ public class StudentDAOMySQL {
            /* setDeleteStatementParameters(student,prStatement);*/
           /*  PreparedStatement.setString(1, id_students)*/
            prStatement.setString(1, id_students);
-            prStatement.execute();
+            prStatement.executeUpdate();
 
 
            /* PreparedStatement.execute();*/
